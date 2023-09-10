@@ -29,7 +29,7 @@ public class KafkaConsumer {
      * @param kafkaMessage
      */
     // example-catalog-topic이라는 곳에 데이터가 전달이 되면 값을 가지고 와서 updateQty 메소드가 실행됨
-    @KafkaListener(topics = "example-catalog-topic")
+    @KafkaListener(topics = "example-catalog-topic") // 해당 이름의 topic에 전달된 데이터를 받겠다는 의미
     public void updateQty(String kafkaMessage) {
         log.info("Kafka Message : ->" + kafkaMessage);
 
